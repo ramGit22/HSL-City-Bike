@@ -2,7 +2,7 @@ const { MongoClient, ObjectId } = require('mongodb');
 const { url } = require('../config');
 const dbName = 'journey_data';
 
-const getJourney = async (id) => {
+const getJourney = async () => {
   try {
     const client = await MongoClient.connect(url, {
       useNewUrlParser: true,
@@ -13,9 +13,7 @@ const getJourney = async (id) => {
 
     const db = client.db(dbName);
 
-    const journey = await db
-      .collection('journeys')
-      .findOne({ _id: ObjectId(id) });
+    const journey = await db.collection('journeys').find({}).toArray();
 
     client.close();
     return journey;
