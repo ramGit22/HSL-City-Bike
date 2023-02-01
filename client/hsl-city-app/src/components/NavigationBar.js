@@ -6,12 +6,12 @@ const styles = { backgroundColor: 'red' };
 const NavigationBar = () => {
   return (
     <Navbar style={{ backgroundColor: '#007ac9' }} expand="lg">
-      <Navbar.Brand href="/journey">
+      <Navbar.Brand href="/">
         {/* <a href="https://www.flaticon.com/free-icons/bike" title="bike icons">Bike icons created by Freepik - Flaticon</a> */}
         <Image
           src={bicycle}
           title="bike icons"
-          width="60"
+          width="50"
           height="60"
           className="d-inline-block align-top"
           alt="Bicycle logo"

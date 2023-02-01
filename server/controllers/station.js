@@ -17,7 +17,15 @@ const getStation = async (req, res) => {
       return station['Kapasiteet'];
     });
 
-    res.json({ stationName, address, city, capacity });
+    const x = station.map((x) => {
+      return x['x'];
+    });
+
+    const y = station.map((y) => {
+      return y['y'];
+    });
+
+    res.json({ stationName, address, city, capacity, x, y });
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: ' Error fetching station details' });
