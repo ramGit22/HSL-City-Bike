@@ -1,10 +1,12 @@
 const { MongoClient, ObjectId } = require('mongodb');
-const { url } = require('../config');
+require('dotenv').config();
+
+// const { uri } = require('../config');
 const dbName = 'journey_data';
 
 const getJourney = async () => {
   try {
-    const client = await MongoClient.connect(url, {
+    const client = await MongoClient.connect(process.env.MONGODB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
