@@ -17,7 +17,6 @@ const StationTable = () => {
     async function fetchData() {
       const response = await axios.get(`http://localhost:3000/station`);
       setStationData(response.data);
-      console.log(response);
     }
     fetchData();
   }, []);

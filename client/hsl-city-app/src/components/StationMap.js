@@ -9,7 +9,6 @@ import NavigationBar from './NavigationBar';
 
 const MapData = () => {
   const [stationData, setStationData] = useState({});
-  // const { x, y } = stationData;
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(`http://localhost:3000/station`);
@@ -17,7 +16,6 @@ const MapData = () => {
     }
     fetchData();
   }, []);
-  console.log('staiondata', stationData);
 
   if (!stationData || Object.keys(stationData).length === 0) {
     return <div>Loading...</div>;
