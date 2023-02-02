@@ -1,13 +1,12 @@
 const csv = require('csvtojson');
 const { MongoClient, ObjectId } = require('mongodb');
+require('dotenv').config();
 
 // Specify the folder path where the CSV files are located
 const folderPath = 'C:\\Users\\O\\Desktop\\solita-assign-hsl\\journey-data\\';
 
 // Connection URL
-const url =
-  'mongodb+srv://rameshkarki:D5P9GyKg0Dz64jA3@cluster0.1w6zjbk.mongodb.net/?retryWrites=true&w=majority';
-
+const url = process.env.MONGODB_URL;
 const dbName = 'journey_data';
 
 async function main() {
