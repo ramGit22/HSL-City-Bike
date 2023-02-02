@@ -23,24 +23,11 @@ const MapData = () => {
     return <div>Loading...</div>;
   }
 
-  // const data = [
-  //   {
-  //     x: 24.840319,
-  //     y: 60.16582,
-  //   },
-  //   {
-  //     x: 24.827467,
-  //     y: 60.171524,
-  //   },
-  //   {
-  //     x: 24.805758,
-  //     y: 60.168266,
-  //   },
-  // ];
-  // const data = {x: [24.840319,24.827467,24.805758], y: [60.16582,60.171524,60.168266]}
   const data = stationData.x.map((x, index) => ({
     x,
     y: stationData.y[index],
+    name: stationData.stationName[index],
+    address: stationData.address[index],
   }));
 
   const markerIcon = L.icon({
@@ -71,9 +58,18 @@ const MapData = () => {
         />
 
         {data ? (
-          data.map((station) => (
-            <Marker position={[station.y, station.x]} icon={markerIcon} />
-            // <Marker position={[y, x]} icon={markerIcon} />
+          data.map((station, index) => (
+            <Marker
+              key={index}
+              position={[station.y, station.x]}
+              icon={markerIcon}
+            >
+              <Popup>
+                Station Name: {station.name}
+                <br />
+                Station Address: {station.address}
+              </Popup>
+            </Marker>
           ))
         ) : (
           <></>

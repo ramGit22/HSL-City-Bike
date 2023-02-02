@@ -22,6 +22,11 @@ const NavigationBar = () => {
       <Navbar.Collapse id="basic-navbar-nav ">
         <Nav className="ml-auto">
           <Nav.Item>
+            <Nav.Link href="/stationmap" style={{ color: 'white' }}>
+              Station Map
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
             <Nav.Link href="/journey" style={{ color: 'white' }}>
               Journey List
             </Nav.Link>

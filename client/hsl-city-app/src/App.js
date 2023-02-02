@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<StationMap />} />
         <Route path="/journey" element={<JourneyTable />} />
+        <Route path="/stationmap" element={<StationMap />} />
 
         <Route path="/station" element={<StationTable />} />
       </Routes>
