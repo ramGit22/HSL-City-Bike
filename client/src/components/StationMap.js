@@ -11,7 +11,7 @@ const MapData = () => {
   const [stationData, setStationData] = useState({});
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(`http://localhost:3000/station`);
+      const response = await axios.get(`http://localhost:3001/station`);
       setStationData(response.data);
     }
     fetchData();

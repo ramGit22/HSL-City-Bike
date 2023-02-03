@@ -15,7 +15,7 @@ const JourneyTable = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(`http://localhost:3000/journey`);
+      const response = await axios.get(`http://localhost:3001/journey`);
       setJourneyData(response.data);
     }
     fetchData();
