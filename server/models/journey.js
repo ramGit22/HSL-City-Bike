@@ -1,9 +1,6 @@
 const { MongoClient, ObjectId } = require('mongodb');
 require('dotenv').config();
 
-// const { uri } = require('../config');
-const dbName = 'journey_data';
-
 const getJourney = async () => {
   try {
     const client = await MongoClient.connect(process.env.MONGODB_URL, {
@@ -13,7 +10,7 @@ const getJourney = async () => {
 
     console.log('Connected successfully to MongoDB database');
 
-    const db = client.db(dbName);
+    const db = client.db(process.env.DB_NAME);
 
     const journey = await db.collection('journeys').find({}).toArray();
 
