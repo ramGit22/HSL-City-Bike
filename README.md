@@ -5,8 +5,9 @@
 A MERN stack based application to display data from city bike journeys in the Helsinki Capital area. This application is a pre-assignment for the Solita Dev Academy Finland 2023 program.
 
 ## Running the Project
+- Install the latest version of node.js(https://nodejs.org/en/).
 - Clone the repository.
-- Install dependencies using npm install.
+- Install dependencies using "npm install" in both client and server folders.
 - Start the backend server using npm start.
 - Start the frontend using npm start.
 - The app will be available at http://localhost:3000/.
