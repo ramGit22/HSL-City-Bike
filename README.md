@@ -1,4 +1,7 @@
 # Helsinki City Bike App
+
+![websitegif](https://user-images.githubusercontent.com/9402604/216608359-232b83c4-ad2b-4568-965c-a823816f1245.gif)
+
 A MERN stack based application to display data from city bike journeys in the Helsinki Capital area. This application is a pre-assignment for the Solita Dev Academy Finland 2023 program.
 
 ## Running the Project
