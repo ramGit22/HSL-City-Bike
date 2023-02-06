@@ -16,7 +16,9 @@ https://user-images.githubusercontent.com/9402604/216610150-8d644207-00e5-4595-9
 https://user-images.githubusercontent.com/9402604/216616140-6017d7fe-bd3d-4c60-9bd9-0b6713d1db25.mp4
 
 ## Data
-The app uses 3 datasets of journey data and a dataset that contains information about city bicycle stations in the Helsinki Region.
+The app uses 1 datasets of journey data and a dataset that contains information about city bicycle stations in the Helsinki Region.
+
+## Note: I used only 1000 journey data due to limitation in storage capacity in my MongoDB database.
 
 ## Features
 ## Data Import
